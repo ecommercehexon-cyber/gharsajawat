@@ -1,4 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--ink:#242321;--gold:#b8955d;--cream:#faf7f1;--muted:#746f67;--line:#e8e0d4;--green:#214b3a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif}a{text-decoration:none;color:inherit}.topbar{background:#20201f;color:#fff;text-align:center;padding:9px;font-size:12px;letter-spacing:.08em}.nav{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 6%;gap:28px;position:sticky;top:0;background:#fff;z-index:20}.logo{width:175px}.logo img{width:100%;height:58px;object-fit:contain}.nav nav{margin-left:auto;display:flex;gap:28px;font-size:14px;font-weight:600}.nav nav a:hover{color:var(--gold)}.bag{font-size:22px}.menu{display:none;border:0;background:none;font-size:26px}.hero{height:560px;position:relative;overflow:hidden}.hero>img{width:100%;height:100%;object-fit:cover}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#171411b8,#1714112b 62%,transparent)}.hero-copy{position:absolute;z-index:2;left:8%;top:50%;transform:translateY(-50%);color:#fff;max-width:540px}.hero-copy>span,.section-head small,.story small,.about small{letter-spacing:.18em;color:var(--gold);font-size:11px;font-weight:700}.hero-copy h1{font:600 64px/1.04 'Playfair Display',serif;margin:18px 0}.hero-copy h1 i{color:#ecd4a9}.hero-copy p{font-size:17px;line-height:1.7}.btn{display:inline-block;background:#fff;padding:14px 25px;border-radius:28px;font-weight:700;margin-top:8px}.btn:hover{background:#f3eadc}.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:26px 8%;background:var(--cream);border-bottom:1px solid var(--line)}.perks div{display:flex;align-items:center;gap:13px}.perks b{font-size:23px;color:var(--gold)}.perks span{font-weight:700}.perks small{display:block;color:var(--muted);font-weight:400;margin-top:4px}.section{padding:88px 7%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-head h2,.story h2,.about h2{font:600 43px/1.15 'Playfair Display',serif;margin:10px 0}.section-head>p{max-width:430px;color:var(--muted);line-height:1.7}.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.collections a{padding:35px;background:var(--cream);border:1px solid var(--line);transition:.25s}.collections a:hover{transform:translateY(-4px);box-shadow:0 14px 35px #00000010}.collections span{font-size:35px}.collections h3{font:600 24px 'Playfair Display',serif;margin:18px 0 7px}.collections p{color:var(--muted);margin:0}.filters{display:flex;gap:8px}.filters button{border:1px solid var(--line);background:#fff;border-radius:22px;padding:9px 16px;cursor:pointer}.filters button.active,.filters button:hover{background:#222;color:#fff}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.card{border:1px solid var(--line);background:#fff;transition:.25s;overflow:hidden}.card:hover{transform:translateY(-5px);box-shadow:0 15px 38px #00000012}.card-img{aspect-ratio:1;background:#f3eee6;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}.card:hover img{transform:scale(1.04)}.card-body{padding:17px}.card-cat{font-size:10px;letter-spacing:.14em;color:var(--gold);font-weight:700}.card h3{font:600 20px 'Playfair Display',serif;margin:8px 0}.price{font-weight:700}.view{display:block;margin-top:12px;font-size:13px;text-decoration:underline}.story{display:grid;grid-template-columns:1.05fr .95fr;background:var(--cream);align-items:center}.story>img{width:100%;height:570px;object-fit:cover}.story>div{padding:10%}.story p,.about p{color:var(--muted);line-height:1.85}.text-link{font-weight:700;display:inline-block;margin-top:12px}.about{text-align:center;padding:90px 7%;max-width:900px;margin:auto}.about p{max-width:680px;margin:auto}footer{background:#20201f;color:#fff;display:grid;grid-template-columns:1.5fr 1.5fr 1fr 1fr;gap:30px;padding:52px 7%}footer>img{width:190px;height:65px;object-fit:contain;background:#fff}footer p,footer a{color:#bdb8ae;font-size:13px;line-height:1.7;display:block;margin-top:9px}.copyright{background:#181817;color:#858078;text-align:center;padding:13px;font-size:11px}
-@media(max-width:900px){.products{grid-template-columns:repeat(2,1fr)}.perks{grid-template-columns:1fr}.collections{grid-template-columns:1fr}.story{grid-template-columns:1fr}.story>img{height:430px}.section{padding:65px 5%}footer{grid-template-columns:1fr 1fr}}
-@media(max-width:680px){.nav{height:70px;padding:0 18px}.logo{width:150px}.menu{display:block;margin-left:auto}.nav nav{display:none;position:absolute;left:0;right:0;top:70px;background:#fff;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.nav nav.open{display:flex}.hero,.hero>img{height:500px}.hero-copy{left:7%;right:7%}.hero-copy h1{font-size:44px}.hero-copy p{font-size:14px}.section-head{align-items:flex-start;flex-direction:column}.section-head h2,.story h2,.about h2{font-size:34px}.products{grid-template-columns:1fr 1fr;gap:12px}.card-body{padding:12px}.card h3{font-size:17px}footer{grid-template-columns:1fr;padding:40px 8%}}
+/* ============ Reset / base ============ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #2b2b2b; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ============ Topbar ============ */
+.topbar {
+  background: #3c2a21;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+}
+
+/* ============ Nav ============ */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  gap: 12px;
+}
+
+/* Logo — responsive sizing */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 32px;      /* phone default */
+  width: auto;
+  display: block;
+}
+
+.footer-logo {
+  height: 36px;
+  width: auto;
+  margin-bottom: 8px;
+}
+
+/* Hamburger menu button (mobile only) */
+.menu {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: block;
+}
+
+/* Nav links */
+#nav {
+  display: none; /* hidden on mobile until toggled */
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  order: 3;
+}
+
+#nav.open { display: flex; }
+
+#nav a {
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.bag {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ============ Tablet / small laptop ============ */
+@media (min-width: 768px) {
+  .logo img {
+    height: 42px;
+  }
+
+  .footer-logo {
+    height: 46px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav {
+    flex-wrap: nowrap;
+  }
+
+  #nav {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    order: 2;
+    gap: 20px;
+  }
+
+  #nav a {
+    padding: 0;
+  }
+}
+
+/* ============ Laptop ============ */
+@media (min-width: 1024px) {
+  .logo img {
+    height: 50px;
+  }
+
+  .footer-logo {
+    height: 54px;
+  }
+
+  .nav {
+    padding: 14px 40px;
+  }
+}
+
+/* ============ Desktop / large screens ============ */
+@media (min-width: 1440px) {
+  .logo img {
+    height: 58px;
+  }
+
+  .footer-logo {
+    height: 60px;
+  }
+
+  .nav {
+    padding: 16px 80px;
+  }
+}
+
+/* ============ Basic layout (placeholder — replace/merge with your real styles) ============ */
+main, footer { padding: 0 16px; }
+.hero { position: relative; }
+.hero img { width: 100%; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.hero-copy {
+  position: absolute; bottom: 10%; left: 5%;
+  color: #fff; max-width: 90%;
+}
+.section { padding: 40px 0; }
+.collections { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.products { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+@media (min-width: 768px) {
+  .collections { grid-template-columns: repeat(3, 1fr); }
+  .products { grid-template-columns: repeat(3, 1fr); }
+  main, footer { padding: 0 40px; }
+}
+
+@media (min-width: 1440px) {
+  main, footer { padding: 0 80px; }
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 16px;
+  background: #f5efe9;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 12px;
+  color: #777;
+}
